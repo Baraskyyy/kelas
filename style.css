@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000000;
+    scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* background-color: #2c3e50; */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+  
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle i {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  
+  /* Slide menu for mobile */
+  @media screen and (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 250px;
+      /* background-color: #34495e; */
+      flex-direction: column;
+      padding-top: 2rem;
+      padding-left: 1.5rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .navbar-nav.active {
+      right: 0;
+    }
+  
+    .navbar-nav a {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  
+    .close-btn {
+      align-self: flex-end;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+    }
+  
+    .close-btn i {
+      width: 30px;
+      height: 30px;
+      color: white;
+    }
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Hamburger icon hidden by default */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle i {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  
+  /* Close icon styling */
+  .close-btn {
+    display: none; /* disembunyikan default di desktop */
+    cursor: pointer;
+  }
+  
+  .close-btn i {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  
+  /* === Mobile view === */
+  @media screen and (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .close-btn {
+      display: block;
+    }
+  
+    .navbar-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 250px;
+      background-color: rgba(44, 62, 80, 0.6); /* semi-transparan */
+      backdrop-filter: blur(10px); /* efek blur */
+      -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+      flex-direction: column;
+      padding-top: 2rem;
+      padding-left: 1.5rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .navbar-nav.active {
+      right: 0;
+    }
+  
+    .navbar-nav a {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  }
+/* Hamburger container */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    z-index: 1001; /* di atas nav menu */
+  }
+  
+  /* Hamburger lines */
+  .navbar-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+  }
+  
+  /* Animate to X when active */
+  .navbar-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Show hamburger only on mobile */
+  @media screen and (max-width: 768px) {
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .navbar-nav {
+      width: 200px; /* lebih ramping sidebar */
+      padding-left: 1rem;
+      padding-top: 1.5rem;
+    }
+  
+    .navbar-nav a {
+      font-size: 1rem; /* perkecil teks */
+    }
+  
+    .navbar-logo {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-toggle span {
+      height: 2px; /* tipiskan garis hamburger */
+    }
+  }
+  
+/* Initial full black screen */
+.buka {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    transition: transform 1.2s ease-in-out;
+  }
+  
+  .buka-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .buka-text p {
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ddd;
+  }
+  
+  /* Hide main content initially */
+  .navbar,
+  #main-content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  /* Show after intro */
+  .show-content .navbar,
+  .show-content #main-content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* When buka slides up */
+  .buka.slide-up {
+    transform: translateY(-100%);
+  }
+  
+  .kata{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+
+  #snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }

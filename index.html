@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <title>Document</title>
+</head>
+<body id="body">
+    <audio id="intro-audio" src="audio/intro.mp3" loop></audio>
+    <canvas id="snow-canvas">❄️</canvas>
+
+
+
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">GPA109</a>
+    <div class="" id="main-content">
+<!-- Feather hamburger icon -->
+<div class="navbar-toggle" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+
+<!-- Slide menu -->
+<div class="navbar-nav" id="nav-menu">
+
+  <a href="#Home">Home</a>
+  <a href="#About">About</a>
+  <a href="#Service">Gallery</a>
+</div>
+
+    </div>
+    
+  </nav>
+  <!-- Navbar end -->
+
+  
+  <!-- background -->
+   <div class="buka">
+    <div class="buka-text">
+      <h1>Welcome To GPA109</h1>
+      <p>Website Ini DI Buat Sebagai Dokumentasi <br> Dan Kenang-Kenangan   </p>
+      <a href="#About" class="btn">Mulai</a>
+    </div>
+   </div>
+
+   <div class="kata">
+    <h1 id="element1">
+    <h1 id="element2">
+    <h1 id="element3">
+</div>  
+
+  <!-- Feather icon render -->
+  <script>
+    feather.replace();
+  </script>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    var typed = new Typed('#element1', 
+    {
+      strings: [
+      'Dipertemukan Oleh Pendidikan'],
+      typeSpeed : 300,
+      delaySpeed : 100,
+      loop : false,
+      startdelayed : 500,
+      showCursor: false,
+    });
+  </script>
+
+  <script>
+    var typed = new Typed('#element2', 
+    {
+      strings: [
+      'Dan'],
+      typeSpeed : 1000,
+      delaySpeed : 2200,
+      loop : false,
+      startdelayed : 2000,
+      showCursor: false,
+    });
+  </script>
+
+  <script>
+    var typed = new Typed('#element3', 
+    {
+      strings: [
+      'Di Pisahkan Oleh Masa Depan'],
+      typeSpeed : 300,
+      delaySpeed : 100,
+      loop : false,
+      startdelayed : 6000,
+      showCursor: false,
+
+    });
+  </script> 
+</body>
+</html>
