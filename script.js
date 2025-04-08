@@ -1,15 +1,24 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// hamburger.addEventListener('click', () => {
-//   hamburger.classList.toggle('active');  // toggle animasi
-//   navMenu.classList.toggle('active');    // toggle menu
-// });
-
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+  
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+  
+    // Optional: auto-close menu saat klik link
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      });
+    });
+  });
+  
+  
+  
 document.addEventListener("DOMContentLoaded", function () {
   const buka = document.querySelector('.buka');
   const getStartedBtn = document.querySelector('.btn');
